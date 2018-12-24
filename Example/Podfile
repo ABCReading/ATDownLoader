@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'ATDownLoader_Example' do
+  pod 'ATDownLoader', :path => '../'
+
+  target 'ATDownLoader_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
