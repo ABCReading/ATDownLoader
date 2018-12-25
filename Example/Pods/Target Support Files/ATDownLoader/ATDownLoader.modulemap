@@ -1,0 +1,6 @@
+framework module ATDownLoader {
+  umbrella header "ATDownLoader-umbrella.h"
+
+  export *
+  module * { export * }
+}

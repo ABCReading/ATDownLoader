@@ -8,6 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		25D94B0CEA0596EB8C3B1A37 /* Pods_ATDownLoader_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8883A2AD5389965F28127079 /* Pods_ATDownLoader_Tests.framework */; };
+		3165398621D085FC0012A1D1 /* ATDownLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3165397E21D085FC0012A1D1 /* ATDownLoader.m */; };
+		3165398721D085FC0012A1D1 /* ATFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3165398221D085FC0012A1D1 /* ATFileTool.m */; };
+		3165398821D085FC0012A1D1 /* ATDownLoaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3165398421D085FC0012A1D1 /* ATDownLoaderManager.m */; };
+		3165398921D085FC0012A1D1 /* NSString+ATMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 3165398521D085FC0012A1D1 /* NSString+ATMD5.m */; };
+		316539B321D22B8A0012A1D1 /* crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 3165398D21D22B8A0012A1D1 /* crypt.c */; };
+		316539B421D22B8A0012A1D1 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 3165398E21D22B8A0012A1D1 /* unzip.c */; };
+		316539B521D22B8A0012A1D1 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 3165398F21D22B8A0012A1D1 /* zip.c */; };
+		316539B621D22B8A0012A1D1 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 3165399121D22B8A0012A1D1 /* ioapi.c */; };
+		316539B721D22B8A0012A1D1 /* ioapi_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 3165399321D22B8A0012A1D1 /* ioapi_buf.c */; };
+		316539B821D22B8A0012A1D1 /* ioapi_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 3165399721D22B8A0012A1D1 /* ioapi_mem.c */; };
+		316539B921D22B8A0012A1D1 /* minishared.c in Sources */ = {isa = PBXBuildFile; fileRef = 3165399821D22B8A0012A1D1 /* minishared.c */; };
+		316539BA21D22B8A0012A1D1 /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 3165399E21D22B8A0012A1D1 /* aeskey.c */; };
+		316539BB21D22B8A0012A1D1 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 3165399F21D22B8A0012A1D1 /* hmac.c */; };
+		316539BC21D22B8A0012A1D1 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 316539A221D22B8A0012A1D1 /* aescrypt.c */; };
+		316539BD21D22B8A0012A1D1 /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 316539A321D22B8A0012A1D1 /* fileenc.c */; };
+		316539BE21D22B8A0012A1D1 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 316539A521D22B8A0012A1D1 /* sha1.c */; };
+		316539BF21D22B8A0012A1D1 /* aes_ni.c in Sources */ = {isa = PBXBuildFile; fileRef = 316539A821D22B8A0012A1D1 /* aes_ni.c */; };
+		316539C021D22B8A0012A1D1 /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 316539AA21D22B8A0012A1D1 /* prng.c */; };
+		316539C121D22B8A0012A1D1 /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 316539AC21D22B8A0012A1D1 /* pwd2key.c */; };
+		316539C221D22B8A0012A1D1 /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 316539AD21D22B8A0012A1D1 /* aestab.c */; };
+		316539C321D22B8A0012A1D1 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 316539B221D22B8A0012A1D1 /* SSZipArchive.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -37,8 +58,54 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14F308B561BDF2EE0763BA05 /* ATDownLoader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ATDownLoader.podspec; path = ../ATDownLoader.podspec; sourceTree = "<group>"; };
+		14F308B561BDF2EE0763BA05 /* ATDownLoader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ATDownLoader.podspec; path = ../ATDownLoader.podspec; sourceTree = "<group>"; };
 		2852CEDB213DC526224615E8 /* Pods-ATDownLoader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATDownLoader_Example.debug.xcconfig"; path = "Target Support Files/Pods-ATDownLoader_Example/Pods-ATDownLoader_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		3165397E21D085FC0012A1D1 /* ATDownLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATDownLoader.m; sourceTree = "<group>"; };
+		3165397F21D085FC0012A1D1 /* ATFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATFileTool.h; sourceTree = "<group>"; };
+		3165398021D085FC0012A1D1 /* NSString+ATMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ATMD5.h"; sourceTree = "<group>"; };
+		3165398121D085FC0012A1D1 /* ATDownLoaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATDownLoaderManager.h; sourceTree = "<group>"; };
+		3165398221D085FC0012A1D1 /* ATFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATFileTool.m; sourceTree = "<group>"; };
+		3165398321D085FC0012A1D1 /* ATDownLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATDownLoader.h; sourceTree = "<group>"; };
+		3165398421D085FC0012A1D1 /* ATDownLoaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATDownLoaderManager.m; sourceTree = "<group>"; };
+		3165398521D085FC0012A1D1 /* NSString+ATMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ATMD5.m"; sourceTree = "<group>"; };
+		3165398B21D22B8A0012A1D1 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		3165398D21D22B8A0012A1D1 /* crypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypt.c; sourceTree = "<group>"; };
+		3165398E21D22B8A0012A1D1 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		3165398F21D22B8A0012A1D1 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		3165399021D22B8A0012A1D1 /* minishared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minishared.h; sourceTree = "<group>"; };
+		3165399121D22B8A0012A1D1 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		3165399221D22B8A0012A1D1 /* ioapi_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi_mem.h; sourceTree = "<group>"; };
+		3165399321D22B8A0012A1D1 /* ioapi_buf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi_buf.c; sourceTree = "<group>"; };
+		3165399421D22B8A0012A1D1 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		3165399521D22B8A0012A1D1 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		3165399621D22B8A0012A1D1 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		3165399721D22B8A0012A1D1 /* ioapi_mem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi_mem.c; sourceTree = "<group>"; };
+		3165399821D22B8A0012A1D1 /* minishared.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = minishared.c; sourceTree = "<group>"; };
+		3165399921D22B8A0012A1D1 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		3165399A21D22B8A0012A1D1 /* ioapi_buf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi_buf.h; sourceTree = "<group>"; };
+		3165399C21D22B8A0012A1D1 /* prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prng.h; sourceTree = "<group>"; };
+		3165399D21D22B8A0012A1D1 /* aes_ni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_ni.h; sourceTree = "<group>"; };
+		3165399E21D22B8A0012A1D1 /* aeskey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aeskey.c; sourceTree = "<group>"; };
+		3165399F21D22B8A0012A1D1 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		316539A021D22B8A0012A1D1 /* aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aestab.h; sourceTree = "<group>"; };
+		316539A121D22B8A0012A1D1 /* pwd2key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pwd2key.h; sourceTree = "<group>"; };
+		316539A221D22B8A0012A1D1 /* aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aescrypt.c; sourceTree = "<group>"; };
+		316539A321D22B8A0012A1D1 /* fileenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fileenc.c; sourceTree = "<group>"; };
+		316539A421D22B8A0012A1D1 /* aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aesopt.h; sourceTree = "<group>"; };
+		316539A521D22B8A0012A1D1 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		316539A621D22B8A0012A1D1 /* brg_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_types.h; sourceTree = "<group>"; };
+		316539A721D22B8A0012A1D1 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		316539A821D22B8A0012A1D1 /* aes_ni.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aes_ni.c; sourceTree = "<group>"; };
+		316539A921D22B8A0012A1D1 /* brg_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_endian.h; sourceTree = "<group>"; };
+		316539AA21D22B8A0012A1D1 /* prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prng.c; sourceTree = "<group>"; };
+		316539AB21D22B8A0012A1D1 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		316539AC21D22B8A0012A1D1 /* pwd2key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pwd2key.c; sourceTree = "<group>"; };
+		316539AD21D22B8A0012A1D1 /* aestab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aestab.c; sourceTree = "<group>"; };
+		316539AE21D22B8A0012A1D1 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		316539AF21D22B8A0012A1D1 /* fileenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileenc.h; sourceTree = "<group>"; };
+		316539B021D22B8A0012A1D1 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		316539B121D22B8A0012A1D1 /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
+		316539B221D22B8A0012A1D1 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
 		57B0A0767AE1783860000010 /* Pods_ATDownLoader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATDownLoader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* ATDownLoader_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATDownLoader_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,14 +126,14 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		65268E8FF9E060834CAEBB21 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		65268E8FF9E060834CAEBB21 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6C28B42400569E107BC245D2 /* Pods-ATDownLoader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATDownLoader_Tests.release.xcconfig"; path = "Target Support Files/Pods-ATDownLoader_Tests/Pods-ATDownLoader_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EF709304A12A87A68CACA83 /* Pods-ATDownLoader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATDownLoader_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ATDownLoader_Tests/Pods-ATDownLoader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8883A2AD5389965F28127079 /* Pods_ATDownLoader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATDownLoader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		954A3AF2C7E46F9DA9963D46 /* Pods-ATDownLoader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATDownLoader_Example.release.xcconfig"; path = "Target Support Files/Pods-ATDownLoader_Example/Pods-ATDownLoader_Example.release.xcconfig"; sourceTree = "<group>"; };
-		CC5C3EC6E04B430441EDB328 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		CC5C3EC6E04B430441EDB328 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +162,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3165397D21D085FC0012A1D1 /* ATDownLoad */ = {
+			isa = PBXGroup;
+			children = (
+				3165398021D085FC0012A1D1 /* NSString+ATMD5.h */,
+				3165398521D085FC0012A1D1 /* NSString+ATMD5.m */,
+				3165397F21D085FC0012A1D1 /* ATFileTool.h */,
+				3165398221D085FC0012A1D1 /* ATFileTool.m */,
+				3165398321D085FC0012A1D1 /* ATDownLoader.h */,
+				3165397E21D085FC0012A1D1 /* ATDownLoader.m */,
+				3165398121D085FC0012A1D1 /* ATDownLoaderManager.h */,
+				3165398421D085FC0012A1D1 /* ATDownLoaderManager.m */,
+			);
+			path = ATDownLoad;
+			sourceTree = "<group>";
+		};
+		3165398A21D22B8A0012A1D1 /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				3165398B21D22B8A0012A1D1 /* ZipArchive.h */,
+				3165398C21D22B8A0012A1D1 /* minizip */,
+				316539B021D22B8A0012A1D1 /* SSZipArchive.h */,
+				316539B121D22B8A0012A1D1 /* SSZipCommon.h */,
+				316539B221D22B8A0012A1D1 /* SSZipArchive.m */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		3165398C21D22B8A0012A1D1 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				3165398D21D22B8A0012A1D1 /* crypt.c */,
+				3165398E21D22B8A0012A1D1 /* unzip.c */,
+				3165398F21D22B8A0012A1D1 /* zip.c */,
+				3165399021D22B8A0012A1D1 /* minishared.h */,
+				3165399121D22B8A0012A1D1 /* ioapi.c */,
+				3165399221D22B8A0012A1D1 /* ioapi_mem.h */,
+				3165399321D22B8A0012A1D1 /* ioapi_buf.c */,
+				3165399421D22B8A0012A1D1 /* crypt.h */,
+				3165399521D22B8A0012A1D1 /* zip.h */,
+				3165399621D22B8A0012A1D1 /* unzip.h */,
+				3165399721D22B8A0012A1D1 /* ioapi_mem.c */,
+				3165399821D22B8A0012A1D1 /* minishared.c */,
+				3165399921D22B8A0012A1D1 /* ioapi.h */,
+				3165399A21D22B8A0012A1D1 /* ioapi_buf.h */,
+				3165399B21D22B8A0012A1D1 /* aes */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		3165399B21D22B8A0012A1D1 /* aes */ = {
+			isa = PBXGroup;
+			children = (
+				3165399C21D22B8A0012A1D1 /* prng.h */,
+				3165399D21D22B8A0012A1D1 /* aes_ni.h */,
+				3165399E21D22B8A0012A1D1 /* aeskey.c */,
+				3165399F21D22B8A0012A1D1 /* hmac.c */,
+				316539A021D22B8A0012A1D1 /* aestab.h */,
+				316539A121D22B8A0012A1D1 /* pwd2key.h */,
+				316539A221D22B8A0012A1D1 /* aescrypt.c */,
+				316539A321D22B8A0012A1D1 /* fileenc.c */,
+				316539A421D22B8A0012A1D1 /* aesopt.h */,
+				316539A521D22B8A0012A1D1 /* sha1.c */,
+				316539A621D22B8A0012A1D1 /* brg_types.h */,
+				316539A721D22B8A0012A1D1 /* hmac.h */,
+				316539A821D22B8A0012A1D1 /* aes_ni.c */,
+				316539A921D22B8A0012A1D1 /* brg_endian.h */,
+				316539AA21D22B8A0012A1D1 /* prng.c */,
+				316539AB21D22B8A0012A1D1 /* aes.h */,
+				316539AC21D22B8A0012A1D1 /* pwd2key.c */,
+				316539AD21D22B8A0012A1D1 /* aestab.c */,
+				316539AE21D22B8A0012A1D1 /* sha1.h */,
+				316539AF21D22B8A0012A1D1 /* fileenc.h */,
+			);
+			path = aes;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +275,8 @@
 		6003F593195388D20070C39A /* Example for ATDownLoader */ = {
 			isa = PBXGroup;
 			children = (
+				3165398A21D22B8A0012A1D1 /* SSZipArchive */,
+				3165397D21D085FC0012A1D1 /* ATDownLoad */,
 				6003F59C195388D20070C39A /* ATAppDelegate.h */,
 				6003F59D195388D20070C39A /* ATAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -193,7 +338,6 @@
 				7EF709304A12A87A68CACA83 /* Pods-ATDownLoader_Tests.debug.xcconfig */,
 				6C28B42400569E107BC245D2 /* Pods-ATDownLoader_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -248,6 +392,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Spaino;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						ProvisioningStyle = Manual;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -368,9 +515,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316539BF21D22B8A0012A1D1 /* aes_ni.c in Sources */,
+				316539BB21D22B8A0012A1D1 /* hmac.c in Sources */,
+				316539B421D22B8A0012A1D1 /* unzip.c in Sources */,
+				316539B921D22B8A0012A1D1 /* minishared.c in Sources */,
 				6003F59E195388D20070C39A /* ATAppDelegate.m in Sources */,
+				3165398621D085FC0012A1D1 /* ATDownLoader.m in Sources */,
+				316539B821D22B8A0012A1D1 /* ioapi_mem.c in Sources */,
+				316539B521D22B8A0012A1D1 /* zip.c in Sources */,
+				316539B321D22B8A0012A1D1 /* crypt.c in Sources */,
+				316539BC21D22B8A0012A1D1 /* aescrypt.c in Sources */,
 				6003F5A7195388D20070C39A /* ATViewController.m in Sources */,
+				316539B721D22B8A0012A1D1 /* ioapi_buf.c in Sources */,
+				316539C121D22B8A0012A1D1 /* pwd2key.c in Sources */,
+				316539C021D22B8A0012A1D1 /* prng.c in Sources */,
+				316539BA21D22B8A0012A1D1 /* aeskey.c in Sources */,
+				316539BE21D22B8A0012A1D1 /* sha1.c in Sources */,
+				316539BD21D22B8A0012A1D1 /* fileenc.c in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				3165398921D085FC0012A1D1 /* NSString+ATMD5.m in Sources */,
+				316539B621D22B8A0012A1D1 /* ioapi.c in Sources */,
+				316539C321D22B8A0012A1D1 /* SSZipArchive.m in Sources */,
+				3165398721D085FC0012A1D1 /* ATFileTool.m in Sources */,
+				316539C221D22B8A0012A1D1 /* aestab.c in Sources */,
+				3165398821D085FC0012A1D1 /* ATDownLoaderManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,12 +666,15 @@
 			baseConfigurationReference = 2852CEDB213DC526224615E8 /* Pods-ATDownLoader_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ATDownLoader/ATDownLoader-Prefix.pch";
 				INFOPLIST_FILE = "ATDownLoader/ATDownLoader-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -513,12 +684,15 @@
 			baseConfigurationReference = 954A3AF2C7E46F9DA9963D46 /* Pods-ATDownLoader_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ATDownLoader/ATDownLoader-Prefix.pch";
 				INFOPLIST_FILE = "ATDownLoader/ATDownLoader-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

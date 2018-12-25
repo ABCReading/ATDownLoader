@@ -1,0 +1,22 @@
+{
+  "name": "ATDownLoader",
+  "version": "0.1.0",
+  "summary": "A short description of ATDownLoader.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Spaino/ATDownLoader",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Spaino": "captain_spaino@163.com"
+  },
+  "source": {
+    "git": "https://github.com/Spaino/ATDownLoader.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ATDownLoader/Classes/**/*"
+}
