@@ -19,12 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.downdURL = [NSURL URLWithString:@"https://qnfile.abctime.com/500map/iPad.zip"];
+    self.downdURL = [NSURL URLWithString:@"https://dldir1.qq.com/qqfile/QQforMac/QQ_V6.5.1.dmg"];
 }
 
 - (IBAction)startAndContnue:(id)sender {
     [[ATDownLoaderManager shareInstance] downLoadWithURL:self.downdURL
-                                          cacheDirectory:@"RAZ_Map"
+                                          cacheDirectory:@"QQ"
                                                 fileInfo:^(long long totalFileSize) {
                                                     NSLog(@"totalFileSize==========>%lld", totalFileSize);
     } success:^(NSString *cachePath, long long totalFileSize) {

@@ -9,6 +9,52 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+- usage
+
+  ``````objective-c
+  - (void)viewDidLoad {
+      [super viewDidLoad];
+  	// set download URL
+      self.downdURL = [NSURL URLWithString:@"https://dldir1.qq.com/qqfile/QQforMac/QQ_V6.5.1.dmg"];
+  }
+  
+  // start download action
+  - (IBAction)startAndContnue:(id)sender {
+      /**
+      * downLoadWithURL 
+      * download success target cacheDirectory
+      * fileInfo: response block, it's file info
+      * success : download success block
+      * fail    : download fail block
+      * progress: downloading progress..
+      * state   : download state
+      */
+      [[ATDownLoaderManager shareInstance] downLoadWithURL:self.downdURL
+                                            cacheDirectory:@"QQ"
+                                                  fileInfo:^(long long totalFileSize) {                                                    NSLog(@"totalFileSize==========>%lld", totalFileSize);
+      } success:^(NSString *cachePath, long long totalFileSize) {
+          NSLog(@"%@++++++%lld", cachePath, totalFileSize);
+      } fail:^(NSString *errorMsg) {
+          NSLog(@"errorMsg========%@", errorMsg);
+      } progress:^(float progress) {
+          NSLog(@"progress========%lf", progress);
+      } state:^(ATDownLoaderState state) {
+          NSLog(@"state-----------%lu", state);
+      }];
+  }
+  
+  // pause download action
+  - (IBAction)pause:(id)sender {
+      [[ATDownLoaderManager shareInstance] pauseWithURL:self.downdURL];
+  }
+  
+  // cancel download action
+  - (IBAction)cancel:(id)sender {
+      [[ATDownLoaderManager shareInstance] cancelWithURL:self.downdURL];
+  }
+  ``````
+
+
 ## Requirements
 
 ## Installation
