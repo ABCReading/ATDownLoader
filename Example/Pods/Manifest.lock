@@ -1,5 +1,5 @@
 PODS:
-  - ATDownLoader (0.1.0)
+  - ATDownLoader (1.0.0)
 
 DEPENDENCIES:
   - ATDownLoader (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ATDownLoader: 58cb4c0cf585bdc0a27b85fb09094486f1e99ee4
+  ATDownLoader: f531661d3fb9ea020caa8d373f25417409bca559
 
 PODFILE CHECKSUM: 5f4d3ea58f77da759b6b35679bc760890c08515e
 

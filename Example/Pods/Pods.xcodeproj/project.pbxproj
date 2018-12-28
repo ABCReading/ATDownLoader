@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1532AEF75CB0459BD4BB6F21B21C7BFD /* ATDownLoaderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F4AD15448444FBA1BBB8253C05CE56DE /* ATDownLoaderManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		204AE0E2340414790DD22BAEAC9CBEDD /* Pods-ATDownLoader_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E69AE28B15B0CB9F1F9AB6CBC74C913 /* Pods-ATDownLoader_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21C7F58B1FA8AB6B04832CD7AB8BECB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		2B0F29D09A8DA415304C65F11883E966 /* ATDownLoader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9728FCD0B06D5D9C937CA2455E3BB723 /* ATDownLoader-dummy.m */; };
+		2D9BA85BAD98A7336137DD52297D7C6F /* ATDownLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = BB2B5395996018F85A44F308B6A29736 /* ATDownLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EEDBC7792C53662B114E4E098AE3775 /* NSString+ATMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = A475A26051F0F60EB43C55B1CAA0A11E /* NSString+ATMD5.m */; };
+		30CA5AB820E1F3BA900A21B45B29B2CC /* ATDownLoaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E7041F302C55D36C1B9D959A13E359 /* ATDownLoaderManager.m */; };
 		348A3B46D6E0A3D736CE1800674664AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		3E23A666DFD50F9430BDEC85F47140BE /* ATFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7642C8ED4D396BF940594DA3FE085B /* ATFileTool.m */; };
+		60F3668D9704A17EA619B1C3D601CC7B /* NSString+ATMD5.h in Headers */ = {isa = PBXBuildFile; fileRef = B1E21A64D1E34EACB35A827072910AC1 /* NSString+ATMD5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A098261B4327A79D4BAC77E98B4ADAC /* ATFileTool.h in Headers */ = {isa = PBXBuildFile; fileRef = AB1F1C5C1EBCD15D81815250BC3F92B7 /* ATFileTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7AF2B73069F05B7EEFC3458EDAAC65B9 /* Pods-ATDownLoader_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D701EF23910FA53CC1C58A193D389BA2 /* Pods-ATDownLoader_Tests-dummy.m */; };
-		7C8FB169D611D5486D28EDF8CCBF8C7F /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDD6C1135F6BA6287278CC6AA2949A9 /* ReplaceMe.m */; };
-		AC026BF5B5E1C48483AE0993B08F1048 /* ATDownLoader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1305DDE73675DB8B7A1D4D0EE5779CF0 /* ATDownLoader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C654A2FBE882C9BA3F4D962630345281 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		9D58804456586CE67AA908C4CCFA25A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		C5BA5B5126BE6A70C031FBD52DBB103D /* ATDownLoader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 20D8E370DD47DB37A10EC9CB9DB5A454 /* ATDownLoader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D81EB328741374C7C02B1C5A82417D5E /* ATDownLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A62D32DD5C0CE11A29A5D0F55222BF89 /* ATDownLoader.m */; };
 		DD254132EA3CEF9924C6AD6A9A190522 /* Pods-ATDownLoader_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 36B18CF87E5FF2E85A0745DDF3DCE84A /* Pods-ATDownLoader_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD7B15AD038A030A6EF67993CEEFB0C1 /* ATDownLoader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E0A1802067A20C3366F6A496AF6FDD /* ATDownLoader-dummy.m */; };
 		EB0711315C8D0BC117184CA9BD144205 /* Pods-ATDownLoader_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 928035DBF2CF24F6108F6483A7CD5913 /* Pods-ATDownLoader_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -31,55 +38,54 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0525F8EC2CC5F004E1CA7FE33F72F1AF;
+			remoteGlobalIDString = 0BECAA572DC1F07948CC056A74F041DF;
 			remoteInfo = ATDownLoader;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1305DDE73675DB8B7A1D4D0EE5779CF0 /* ATDownLoader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ATDownLoader-umbrella.h"; sourceTree = "<group>"; };
+		1B31D40AB4BD35176FD570CC1521F231 /* ATDownLoader.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ATDownLoader.xcconfig; sourceTree = "<group>"; };
+		20D8E370DD47DB37A10EC9CB9DB5A454 /* ATDownLoader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ATDownLoader-umbrella.h"; sourceTree = "<group>"; };
 		229FE6AFFD5916ED9579783628A304A6 /* Pods-ATDownLoader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATDownLoader_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2505C204BBAF23E75B02F7F4918D615E /* Pods_ATDownLoader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ATDownLoader_Tests.framework; path = "Pods-ATDownLoader_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36B18CF87E5FF2E85A0745DDF3DCE84A /* Pods-ATDownLoader_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ATDownLoader_Example-umbrella.h"; sourceTree = "<group>"; };
-		3857791E269DF016B4B6CFD8F7D0E264 /* ATDownLoader.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ATDownLoader.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3F708D7F42964375C0ECA87DE44CF167 /* Pods-ATDownLoader_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ATDownLoader_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		43875456E25B93E51F8C9F5E2E9C4D01 /* Pods-ATDownLoader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATDownLoader_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		5B3E263A53DCC6ABE85881F4CE024251 /* ATDownLoader.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ATDownLoader.xcconfig; sourceTree = "<group>"; };
-		6BB01379B5EB07D061FA78CB25128DE1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		55976D84415FC742CBE296D1DDC3E7F4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		5CA2B30D7F26948F81E9DF2DC5D14505 /* ATDownLoader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ATDownLoader.modulemap; sourceTree = "<group>"; };
+		66E7041F302C55D36C1B9D959A13E359 /* ATDownLoaderManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ATDownLoaderManager.m; path = ATDownLoader/Classes/ATDownLoaderManager.m; sourceTree = "<group>"; };
 		6C61B8E0A85DE6AF5E5456AC589642DD /* Pods-ATDownLoader_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ATDownLoader_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6E69AE28B15B0CB9F1F9AB6CBC74C913 /* Pods-ATDownLoader_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ATDownLoader_Tests-umbrella.h"; sourceTree = "<group>"; };
-		7FDD6C1135F6BA6287278CC6AA2949A9 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = ATDownLoader/Classes/ReplaceMe.m; sourceTree = "<group>"; };
+		6E7642C8ED4D396BF940594DA3FE085B /* ATFileTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ATFileTool.m; path = ATDownLoader/Classes/ATFileTool.m; sourceTree = "<group>"; };
+		898E11566EA1728184C76D0E79C058C3 /* ATDownLoader-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ATDownLoader-Info.plist"; sourceTree = "<group>"; };
 		8A00C607995DBDB5C6A8830C2B843D5F /* Pods-ATDownLoader_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ATDownLoader_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9271909DEF74BE8CE8EF1A9A5EBEE53E /* ATDownLoader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ATDownLoader-prefix.pch"; sourceTree = "<group>"; };
 		928035DBF2CF24F6108F6483A7CD5913 /* Pods-ATDownLoader_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ATDownLoader_Example-dummy.m"; sourceTree = "<group>"; };
-		96CF6C49BDD7907CEC60ADF3AE1247F0 /* ATDownLoader-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ATDownLoader-Info.plist"; sourceTree = "<group>"; };
-		9728FCD0B06D5D9C937CA2455E3BB723 /* ATDownLoader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ATDownLoader-dummy.m"; sourceTree = "<group>"; };
 		973AF49D3FA502B1E9265D94B99DE9D0 /* ATDownLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ATDownLoader.framework; path = ATDownLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B65384962FEB60F44A1766A6E2A5AAC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		A14C87625215ED163992141B9B283D72 /* Pods-ATDownLoader_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ATDownLoader_Example-Info.plist"; sourceTree = "<group>"; };
-		AAF1570E5B7C796E523B9FC82D239124 /* ATDownLoader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ATDownLoader.modulemap; sourceTree = "<group>"; };
+		A475A26051F0F60EB43C55B1CAA0A11E /* NSString+ATMD5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+ATMD5.m"; path = "ATDownLoader/Classes/NSString+ATMD5.m"; sourceTree = "<group>"; };
+		A62D32DD5C0CE11A29A5D0F55222BF89 /* ATDownLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ATDownLoader.m; path = ATDownLoader/Classes/ATDownLoader.m; sourceTree = "<group>"; };
+		AB1F1C5C1EBCD15D81815250BC3F92B7 /* ATFileTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ATFileTool.h; path = ATDownLoader/Classes/ATFileTool.h; sourceTree = "<group>"; };
 		AFAE17BDE8962E723891734AB52A4E8F /* Pods-ATDownLoader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATDownLoader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B18B667EBE43EBD49F333149F6052C22 /* Pods-ATDownLoader_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ATDownLoader_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B1E21A64D1E34EACB35A827072910AC1 /* NSString+ATMD5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+ATMD5.h"; path = "ATDownLoader/Classes/NSString+ATMD5.h"; sourceTree = "<group>"; };
 		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB2B5395996018F85A44F308B6A29736 /* ATDownLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ATDownLoader.h; path = ATDownLoader/Classes/ATDownLoader.h; sourceTree = "<group>"; };
 		BBC263D8A9395A5E0D846EAB78DC653B /* Pods-ATDownLoader_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ATDownLoader_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C6A0DD7A016E0D95EB53983C2B691650 /* Pods-ATDownLoader_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ATDownLoader_Tests.modulemap"; sourceTree = "<group>"; };
+		C6E0A1802067A20C3366F6A496AF6FDD /* ATDownLoader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ATDownLoader-dummy.m"; sourceTree = "<group>"; };
 		C993595506C82EED89BD7E2241740038 /* Pods-ATDownLoader_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ATDownLoader_Example.modulemap"; sourceTree = "<group>"; };
 		CAF5E123CC624E03838188D4BF9FCD38 /* Pods-ATDownLoader_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ATDownLoader_Tests-Info.plist"; sourceTree = "<group>"; };
+		CCD4CF68D741335CC1ED979F57AB8EF4 /* ATDownLoader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ATDownLoader-prefix.pch"; sourceTree = "<group>"; };
+		D2DCD7DAD211BDD189F3003D49CDB9EB /* ATDownLoader.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ATDownLoader.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D701EF23910FA53CC1C58A193D389BA2 /* Pods-ATDownLoader_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ATDownLoader_Tests-dummy.m"; sourceTree = "<group>"; };
 		D8B09933F446D403FD868BB2DA958F46 /* Pods_ATDownLoader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ATDownLoader_Example.framework; path = "Pods-ATDownLoader_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E24834340B3A9B84FDCF3B693D767A2E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F4AD15448444FBA1BBB8253C05CE56DE /* ATDownLoaderManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ATDownLoaderManager.h; path = ATDownLoader/Classes/ATDownLoaderManager.h; sourceTree = "<group>"; };
 		F6EA20A88DDEDD8B575C9811CBAD43DB /* Pods-ATDownLoader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATDownLoader_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1C8FE2C80D5A66E0F34BCFE2A8F1FA8A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C654A2FBE882C9BA3F4D962630345281 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		29E02622D8A3D0761FF33479B4D5EC72 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -96,17 +102,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E05EF7CA1C7B082F868CAEFB0D0F6981 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D58804456586CE67AA908C4CCFA25A9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14A3BFF1B950DE8DF82FD3D640D75173 /* Pod */ = {
+		25FCB9AF0C8828BFFD00182797CCA95E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3857791E269DF016B4B6CFD8F7D0E264 /* ATDownLoader.podspec */,
-				9B65384962FEB60F44A1766A6E2A5AAC /* LICENSE */,
-				6BB01379B5EB07D061FA78CB25128DE1 /* README.md */,
+				5CA2B30D7F26948F81E9DF2DC5D14505 /* ATDownLoader.modulemap */,
+				1B31D40AB4BD35176FD570CC1521F231 /* ATDownLoader.xcconfig */,
+				C6E0A1802067A20C3366F6A496AF6FDD /* ATDownLoader-dummy.m */,
+				898E11566EA1728184C76D0E79C058C3 /* ATDownLoader-Info.plist */,
+				CCD4CF68D741335CC1ED979F57AB8EF4 /* ATDownLoader-prefix.pch */,
+				20D8E370DD47DB37A10EC9CB9DB5A454 /* ATDownLoader-umbrella.h */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ATDownLoader";
 			sourceTree = "<group>";
 		};
 		325D95EBB44618EF749865664CF42971 /* Pods-ATDownLoader_Example */ = {
@@ -124,6 +142,24 @@
 			);
 			name = "Pods-ATDownLoader_Example";
 			path = "Target Support Files/Pods-ATDownLoader_Example";
+			sourceTree = "<group>";
+		};
+		4039C75155B6C2FD6C1430E9224F3CCF /* ATDownLoader */ = {
+			isa = PBXGroup;
+			children = (
+				BB2B5395996018F85A44F308B6A29736 /* ATDownLoader.h */,
+				A62D32DD5C0CE11A29A5D0F55222BF89 /* ATDownLoader.m */,
+				F4AD15448444FBA1BBB8253C05CE56DE /* ATDownLoaderManager.h */,
+				66E7041F302C55D36C1B9D959A13E359 /* ATDownLoaderManager.m */,
+				AB1F1C5C1EBCD15D81815250BC3F92B7 /* ATFileTool.h */,
+				6E7642C8ED4D396BF940594DA3FE085B /* ATFileTool.m */,
+				B1E21A64D1E34EACB35A827072910AC1 /* NSString+ATMD5.h */,
+				A475A26051F0F60EB43C55B1CAA0A11E /* NSString+ATMD5.m */,
+				DEB51E8F443EEFF4A192D40816E768D7 /* Pod */,
+				25FCB9AF0C8828BFFD00182797CCA95E /* Support Files */,
+			);
+			name = ATDownLoader;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		44D5347904CF754D6785B84253F2574A /* iOS */ = {
@@ -150,19 +186,11 @@
 			path = "Target Support Files/Pods-ATDownLoader_Tests";
 			sourceTree = "<group>";
 		};
-		5CBA28CA5B3DDC1BF8890EDEDD38D779 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D8B8B009B05AA0DD4C56F486BEA3AAA8 /* ATDownLoader */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */,
-				5CBA28CA5B3DDC1BF8890EDEDD38D779 /* Development Pods */,
+				BC52C99A7532C91E7DD71217D2678166 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				93633C2AA2C9A88E5CA88AC7710B61C3 /* Products */,
 				88B3B28FB7A2B26D9CC0E4F5C95A32E8 /* Targets Support Files */,
@@ -176,20 +204,6 @@
 				5508C1845B0B66D5E831CB797AC11A2A /* Pods-ATDownLoader_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		9137AF404C36784BA2B4452D47C97AB6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AAF1570E5B7C796E523B9FC82D239124 /* ATDownLoader.modulemap */,
-				5B3E263A53DCC6ABE85881F4CE024251 /* ATDownLoader.xcconfig */,
-				9728FCD0B06D5D9C937CA2455E3BB723 /* ATDownLoader-dummy.m */,
-				96CF6C49BDD7907CEC60ADF3AE1247F0 /* ATDownLoader-Info.plist */,
-				9271909DEF74BE8CE8EF1A9A5EBEE53E /* ATDownLoader-prefix.pch */,
-				1305DDE73675DB8B7A1D4D0EE5779CF0 /* ATDownLoader-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/ATDownLoader";
 			sourceTree = "<group>";
 		};
 		93633C2AA2C9A88E5CA88AC7710B61C3 /* Products */ = {
@@ -210,20 +224,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D8B8B009B05AA0DD4C56F486BEA3AAA8 /* ATDownLoader */ = {
+		BC52C99A7532C91E7DD71217D2678166 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7FDD6C1135F6BA6287278CC6AA2949A9 /* ReplaceMe.m */,
-				14A3BFF1B950DE8DF82FD3D640D75173 /* Pod */,
-				9137AF404C36784BA2B4452D47C97AB6 /* Support Files */,
+				4039C75155B6C2FD6C1430E9224F3CCF /* ATDownLoader */,
 			);
-			name = ATDownLoader;
-			path = ../..;
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		DEB51E8F443EEFF4A192D40816E768D7 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D2DCD7DAD211BDD189F3003D49CDB9EB /* ATDownLoader.podspec */,
+				55976D84415FC742CBE296D1DDC3E7F4 /* LICENSE */,
+				E24834340B3A9B84FDCF3B693D767A2E /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1C36D89B13C381DF614C3DAE1A124182 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5BA5B5126BE6A70C031FBD52DBB103D /* ATDownLoader-umbrella.h in Headers */,
+				2D9BA85BAD98A7336137DD52297D7C6F /* ATDownLoader.h in Headers */,
+				1532AEF75CB0459BD4BB6F21B21C7BFD /* ATDownLoaderManager.h in Headers */,
+				6A098261B4327A79D4BAC77E98B4ADAC /* ATFileTool.h in Headers */,
+				60F3668D9704A17EA619B1C3D601CC7B /* NSString+ATMD5.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51034ADA0F5FA1ED9B025D08D48CEACA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,25 +273,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BEA09D0AF5EABBA3FF346770C52B40F9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AC026BF5B5E1C48483AE0993B08F1048 /* ATDownLoader-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0525F8EC2CC5F004E1CA7FE33F72F1AF /* ATDownLoader */ = {
+		0BECAA572DC1F07948CC056A74F041DF /* ATDownLoader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50E2946154D2427A66F951A110B30A67 /* Build configuration list for PBXNativeTarget "ATDownLoader" */;
+			buildConfigurationList = DFB241B789D6E507AFFCB466C48D8890 /* Build configuration list for PBXNativeTarget "ATDownLoader" */;
 			buildPhases = (
-				BEA09D0AF5EABBA3FF346770C52B40F9 /* Headers */,
-				03BE144ABA2D15A5AA523B4F44C143FC /* Sources */,
-				1C8FE2C80D5A66E0F34BCFE2A8F1FA8A /* Frameworks */,
-				954DC7E22F82F09E081111F8C57C8205 /* Resources */,
+				1C36D89B13C381DF614C3DAE1A124182 /* Headers */,
+				FFA70D807F41073FC9480FDA6D0CE41D /* Sources */,
+				E05EF7CA1C7B082F868CAEFB0D0F6981 /* Frameworks */,
+				AC50A8CE5EA02FB560FAA9062FA28E84 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -328,7 +353,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0525F8EC2CC5F004E1CA7FE33F72F1AF /* ATDownLoader */,
+				0BECAA572DC1F07948CC056A74F041DF /* ATDownLoader */,
 				F53B23F18B3BD094435A657984A3EB92 /* Pods-ATDownLoader_Example */,
 				ACAACA4F313AB54403C8113D294BBCB6 /* Pods-ATDownLoader_Tests */,
 			);
@@ -336,7 +361,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		954DC7E22F82F09E081111F8C57C8205 /* Resources */ = {
+		AC50A8CE5EA02FB560FAA9062FA28E84 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,15 +385,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		03BE144ABA2D15A5AA523B4F44C143FC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2B0F29D09A8DA415304C65F11883E966 /* ATDownLoader-dummy.m in Sources */,
-				7C8FB169D611D5486D28EDF8CCBF8C7F /* ReplaceMe.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		04698F07FCE3F1E282A1768A748836DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -385,13 +401,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFA70D807F41073FC9480FDA6D0CE41D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7B15AD038A030A6EF67993CEEFB0C1 /* ATDownLoader-dummy.m in Sources */,
+				D81EB328741374C7C02B1C5A82417D5E /* ATDownLoader.m in Sources */,
+				30CA5AB820E1F3BA900A21B45B29B2CC /* ATDownLoaderManager.m in Sources */,
+				3E23A666DFD50F9430BDEC85F47140BE /* ATFileTool.m in Sources */,
+				2EEDBC7792C53662B114E4E098AE3775 /* NSString+ATMD5.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		2E59BBDC02EA00E9CFEC344F619F47BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ATDownLoader;
-			target = 0525F8EC2CC5F004E1CA7FE33F72F1AF /* ATDownLoader */;
+			target = 0BECAA572DC1F07948CC056A74F041DF /* ATDownLoader */;
 			targetProxy = 7A72A5E7CD5F788AF7F3DA4A9815CFFC /* PBXContainerItemProxy */;
 		};
 		834E6878C4246A1B76E01C2208EFE9DD /* PBXTargetDependency */ = {
@@ -502,67 +530,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		7528B1D89166B841B22B69C8219105A2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B3E263A53DCC6ABE85881F4CE024251 /* ATDownLoader.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ATDownLoader/ATDownLoader-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ATDownLoader/ATDownLoader-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ATDownLoader/ATDownLoader.modulemap";
-				PRODUCT_MODULE_NAME = ATDownLoader;
-				PRODUCT_NAME = ATDownLoader;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9B0E5E269A24BFBDAA68FC7FA95BC9C4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B3E263A53DCC6ABE85881F4CE024251 /* ATDownLoader.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ATDownLoader/ATDownLoader-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ATDownLoader/ATDownLoader-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ATDownLoader/ATDownLoader.modulemap";
-				PRODUCT_MODULE_NAME = ATDownLoader;
-				PRODUCT_NAME = ATDownLoader;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		AB3D4E42FDFF833657EAD911697EC365 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -722,6 +689,67 @@
 			};
 			name = Debug;
 		};
+		D9903621F8F4D5C6C3E1A7230A848799 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B31D40AB4BD35176FD570CC1521F231 /* ATDownLoader.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ATDownLoader/ATDownLoader-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ATDownLoader/ATDownLoader-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ATDownLoader/ATDownLoader.modulemap";
+				PRODUCT_MODULE_NAME = ATDownLoader;
+				PRODUCT_NAME = ATDownLoader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EFED6DF296807E8BD61428C90EBA516D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B31D40AB4BD35176FD570CC1521F231 /* ATDownLoader.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ATDownLoader/ATDownLoader-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ATDownLoader/ATDownLoader-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ATDownLoader/ATDownLoader.modulemap";
+				PRODUCT_MODULE_NAME = ATDownLoader;
+				PRODUCT_NAME = ATDownLoader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -730,15 +758,6 @@
 			buildConfigurations = (
 				CFC8DEA7B5326676BA33093221AAE4F4 /* Debug */,
 				BE01AF5D395AE305A54D518A9B774D2A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		50E2946154D2427A66F951A110B30A67 /* Build configuration list for PBXNativeTarget "ATDownLoader" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7528B1D89166B841B22B69C8219105A2 /* Debug */,
-				9B0E5E269A24BFBDAA68FC7FA95BC9C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -757,6 +776,15 @@
 			buildConfigurations = (
 				2263295B24EDBC2C7B9B6C0931B48DB5 /* Debug */,
 				1873301EB4E513F31C6F9E549E99F848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFB241B789D6E507AFFCB466C48D8890 /* Build configuration list for PBXNativeTarget "ATDownLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFED6DF296807E8BD61428C90EBA516D /* Debug */,
+				D9903621F8F4D5C6C3E1A7230A848799 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

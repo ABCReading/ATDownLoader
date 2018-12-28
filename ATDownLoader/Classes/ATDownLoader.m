@@ -11,13 +11,11 @@
 
 
 @interface ATDownLoader()<NSURLSessionDataDelegate>
-{
-    // 文件下载的总大小
-    long long _totalFileSize;
-    // 临时下载文件的大小
-    long long _tmpFileSize;
-    
-}
+// 临时下载文件的大小
+@property (nonatomic, assign) long long tmpFileSize;
+// 文件下载的总大小
+@property (nonatomic, assign) long long totalFileSize;
+
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, weak) NSURLSessionDataTask *task;
 
@@ -39,9 +37,9 @@
 @property (nonatomic, assign, readonly) float progress;
 
 /** 文件下载信息的block */
-@property (nonatomic, copy)  kATDownLoadInfoBlock downLoadInfoBlcok;
+@property (nonatomic, copy)  kATDownLoadInfoBlock downLoadInfoBlock;
 /** 状态改变的block */
-@property (nonatomic, copy)  kATDownLoadStateChangeBlock stateChangeBlcok;
+@property (nonatomic, copy)  kATDownLoadStateChangeBlock stateChangeBlock;
 /** 进度改变的block */
 @property (nonatomic, copy)  kATDownLoadProgressBlock progressBlock;
 /** 下载成功的block */
@@ -58,14 +56,19 @@
 // MARK: - 懒加载
 - (NSURLSession *)session {
     if (!_session) {
-        _session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+        NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+        queue.maxConcurrentOperationCount = 5;
+        _session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"download"]
+                                                 delegate:self
+                                            delegateQueue:queue];
     }
     return _session;
 }
 
 // MARK: - 接口
 - (NSString *)cachePathWithURL:(NSURL *)url {
-    return [self.class cachePathWithCacheDirectory:self.cacheDirectory URL:url];
+    return [self.class cachePathWithCacheDirectory:self.cacheDirectory
+                                               URL:url];
 }
 
 + (NSString *)cachePathWithCacheDirectory:(NSString *)cacheDirectory
@@ -99,18 +102,18 @@
 
 - (void)downLoadWithURL:(NSURL *)url
          cacheDirectory:(NSString *)cacheDirectory
-               fileInfo:(kATDownLoadInfoBlock)downLoadInfoBlcok
+               fileInfo:(kATDownLoadInfoBlock)downLoadInfoBlock
                 success:(kATDownLoadSuccessBlock)successBlock
                    fail:(kATDownLoadFailBlock)failBlock
                progress:(kATDownLoadProgressBlock)progressBlock
                   state:(kATDownLoadStateChangeBlock)stateBlock {
     self.url = url;
     self.cacheDirectory = cacheDirectory;
-    self.downLoadInfoBlcok = downLoadInfoBlcok;
+    self.downLoadInfoBlock = downLoadInfoBlock;
     self.successBlock = successBlock;
     self.failBlock = failBlock;
     self.progressBlock = progressBlock;
-    self.stateChangeBlcok = stateBlock;
+    self.stateChangeBlock = stateBlock;
     [self downLoadWithURL:url];
 }
 
@@ -124,13 +127,15 @@
 
     if ([ATFileTool isExistsWithFile:self.cacheFilePath]) {
 
-        if (self.downLoadInfoBlcok) {
-            self.downLoadInfoBlcok([ATFileTool fileSizeWithPath:self.cacheFilePath]);
+        if (self.downLoadInfoBlock) {
+            __weak typeof(self) weakSelf = self;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                weakSelf.downLoadInfoBlock([ATFileTool fileSizeWithPath:weakSelf.cacheFilePath]);
+            });
         }
-
-        [self handleSuccessBlock];
-        
         self.state = ATDownLoaderStateSuccess;
+        self.progress = 1.0;
+        [self handleSuccessBlock];
         return;
     }
 
@@ -145,10 +150,10 @@
 
     // 文件还没下载完成, 所在路径
     self.tmpFilePath = [ATFileTool tmpFilePathWithURL:url];
-    _tmpFileSize = [ATFileTool fileSizeWithPath:self.tmpFilePath];
+    self.tmpFileSize = [ATFileTool fileSizeWithPath:self.tmpFilePath];
 
     // 使用 tmpFileSize, 作为偏移量进行下载请求
-    [self downLoadWithURL:url fromBytesOffset:_tmpFileSize];
+    [self downLoadWithURL:url fromBytesOffset:self.tmpFileSize];
 }
 
 - (void)resume {
@@ -189,8 +194,11 @@
         return;
     }
     _state = state;
-    if (self.stateChangeBlcok) {
-        self.stateChangeBlcok(state);
+    if (self.stateChangeBlock) {
+        __weak typeof(self) weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            weakSelf.stateChangeBlock(state);
+        });
     }
 
     // 发送通知, 让外界监听状态改变
@@ -207,7 +215,10 @@
 - (void)setProgress:(float)progress {
     _progress = progress;
     if (self.progressBlock) {
-        self.progressBlock(progress);
+        __weak typeof(self) weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            weakSelf.progressBlock(progress);
+        });
     }
 }
 
@@ -232,8 +243,11 @@
  */
 - (void)downLoadWithURL:(NSURL *)url fromBytesOffset:(long long)offset {
     // 创建一个请求, 设置缓存策略, 和请求的Range字段
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:0];
-    [request setValue:[NSString stringWithFormat:@"bytes=%lld-", offset] forHTTPHeaderField:@"Range"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
+                                                           cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
+                                                       timeoutInterval:0];
+    [request setValue:[NSString stringWithFormat:@"bytes=%lld-", offset]
+   forHTTPHeaderField:@"Range"];
     self.task = [self.session dataTaskWithRequest:request];
 
     [self.task resume];
@@ -247,33 +261,39 @@
           dataTask:(NSURLSessionDataTask *)dataTask
 didReceiveResponse:(NSURLResponse *)response
  completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
-
-    NSHTTPURLResponse *httpRes = (NSHTTPURLResponse *)response;
     // 获取文件总大小
 
 //    "Content-Length" = 21574062; 本次请求的总大小
 //    "Content-Range" = "bytes 0-21574061/21574062"; 本次请求的区间 开始字节-结束字节 / 总字节
-    NSString *rangeStr = httpRes.allHeaderFields[@"Content-Range"];
-    _totalFileSize = [[[rangeStr componentsSeparatedByString:@"/"] lastObject] longLongValue];
-
-    if (self.downLoadInfoBlcok) {
-        self.downLoadInfoBlcok(_totalFileSize);
+    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+    self.totalFileSize = [httpResponse.allHeaderFields[@"Content-Length"] longLongValue];
+    if (httpResponse.allHeaderFields[@"Content-Range"]) {
+        NSString *rangeStr = httpResponse.allHeaderFields[@"Content-Range"] ;
+        self.totalFileSize = [[[rangeStr componentsSeparatedByString:@"/"] lastObject] longLongValue];
+        
+    }
+    
+    if (self.downLoadInfoBlock) {
+        __weak typeof(self) weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            weakSelf.downLoadInfoBlock(weakSelf.totalFileSize);
+        });
     }
 
     // 如果临时缓存已经足够了, 则, 直接移动文件到缓存路径下, 并取消本次请求
-    if (_tmpFileSize == _totalFileSize) {
+    if (self.tmpFileSize == self.totalFileSize) {
         [ATFileTool moveFilePath:self.tmpFilePath toFilePath:self.cacheFilePath];
         [self cancel];
         completionHandler(NSURLSessionResponseCancel);
 
         // 给外界返回结果
         NSLog(@"告诉外界, 已经下载完毕: %@", self.cacheFilePath);
-
+        self.progress = 1.0;
         [self handleSuccessBlock];
         return;
     }
 
-    if (_tmpFileSize > _totalFileSize) {
+    if (self.tmpFileSize > self.totalFileSize) {
         // 删除缓存
         [ATFileTool removeFileAtPath:self.tmpFilePath];
         // 取消本次请求
@@ -302,8 +322,8 @@ didReceiveResponse:(NSURLResponse *)response
 - (void)URLSession:(NSURLSession *)session
           dataTask:(NSURLSessionDataTask *)dataTask
     didReceiveData:(NSData *)data {
-    _tmpFileSize += data.length;
-    self.progress = 1.0 * _tmpFileSize / _totalFileSize;
+    self.tmpFileSize += data.length;
+    self.progress = 1.0 * self.tmpFileSize / self.totalFileSize;
     // 接收数据, 会调用多次
     [self.outputStream write:data.bytes maxLength:data.length];
 }
@@ -316,7 +336,10 @@ didCompleteWithError:(NSError *)error {
         NSLog(@"下载出错或取消--%@", error);
         self.state = ATDownLoaderStateFailed;
         if (self.failBlock) {
-            self.failBlock(error.localizedDescription);
+            __weak typeof(self) weakSelf = self;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                weakSelf.failBlock(error.localizedDescription);
+            });
         }
     } else {
         NSLog(@"下载成功");
@@ -333,11 +356,14 @@ didCompleteWithError:(NSError *)error {
 
 - (void)handleSuccessBlock {
     if (self.successBlock) {
-        NSString *targetPath = self.cacheFilePath;
-        if (![self.cacheFilePath pathExtension].length) {
-            targetPath = [targetPath stringByAppendingPathComponent:self.url.lastPathComponent];
-        }
-        self.successBlock(targetPath, _totalFileSize);
+        __weak typeof(self) weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *targetPath = weakSelf.cacheFilePath;
+            if (![weakSelf.cacheFilePath pathExtension].length) {
+                targetPath = [targetPath stringByAppendingPathComponent:self.url.lastPathComponent];
+            }
+            weakSelf.successBlock(targetPath, weakSelf.totalFileSize);
+        });
     }
 }
 

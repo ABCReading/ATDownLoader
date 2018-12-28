@@ -7,7 +7,7 @@
 //
 
 #import "ATViewController.h"
-#import "ATDownLoad/ATDownLoaderManager.h"
+#import <ATDownLoader/ATDownLoaderManager.h>
 #import "SSZipArchive/SSZipArchive.h"
 
 @interface ATViewController ()
